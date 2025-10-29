@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to BlogSpace</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #bcb9b4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      color: #1e1e20;
+      margin-bottom: 25px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .login-btn {
+      width: 100%;
+      background-color: #131314;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .login-btn:hover {
+      background-color: #dfa831;
+    }
+
+    .signup-text {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .signup-text a {
+      color: #165df5;
+      text-decoration: none;
+    }
+
+    .signup-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login to BlogSpace</h2>
+    <form onsubmit="redirectToHome(event)">
+      <input type="email" placeholder="Email" class="form-input" required>
+      <input type="password" placeholder="Password" class="form-input" required>
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+    <p class="signup-text">
+      Don't have an account? <a href="signup.html">Sign up</a>
+    </p>
+  </div>
+
+  <script>
+    function redirectToHome(event) {
+      event.preventDefault(); // Prevents form from actually submitting
+      window.location.href = "home.html"; // Redirects to homepage
+    }
+  </script>
+
+</body>
+</html>

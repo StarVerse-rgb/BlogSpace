@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Style & Stroll | Fashion Through the Seasons</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #f3f1ee;
+      color: #333;
+      line-height: 1.8;
+      padding: 30px;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: #1f1f1f;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-style: italic;
+      color: #ccc;
+      margin-top: 8px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    article h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .author, .date {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    article img {
+  max-width: 700px;
+  width: 90%;
+  display: block;
+  margin: 30px auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+article img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+    article h3 {
+      margin-top: 30px;
+      color: #7c3aed;
+      font-size: 1.8rem;
+    }
+
+    .photo-gallery {
+      margin: 60px 0;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo-gallery h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #444;
+      font-size: 2rem;
+    }
+
+    .gallery-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-images img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-images img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      border-radius: 10px;
+      color: #555;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Style & Stroll</h1>
+    <p>Fashion through the seasons, one city at a time</p>
+  </header>
+
+  <main>
+    <article>
+      <h2>From Sidewalks to Spotlights: A Fashion Journey</h2>
+      <p class="date">April 23, 2025</p>
+      <p class="author">By <strong>@chicNomad</strong></p>
+
+      <p>This season, fashion took me from the pastel streets of Paris to the bustling markets of Seoul. With every step, I witnessed how trends reflect culture, mood, and personal identity. Here's how the world wore its wardrobe this spring-summer transition.</p>
+
+      <img src=https://assets.vogue.com/photos/615cb9788b6ad31d46ef2976/master/w_2560%2Cc_limit/00_story.jpg alt="Paris Fashion" onclick="openLightbox(this.src)" />
+
+      <h3>Paris: Pastel Dreams & Modern Romance</h3>
+      <p>Paris was draped in satin and soft hues. Ruffled blouses, structured linen trousers, and bucket bags dominated the sidewalks near Rue Saint-Honoré. The vibe? Elegance with ease. My favorite moment was watching an older couple in coordinated blush trench coats sipping espresso like time had paused just for their style.</p>
+
+      <img src=https://assets.vogue.com/photos/63f937425af7573e1849a2ea/master/w_2560%2Cc_limit/00-story%2520(1).jpg alt="Spring street fashion" onclick="openLightbox(this.src)" />
+
+      <h3>Seoul: Edge Meets Innovation</h3>
+      <p>Seoul always surprises me. On the same block, you'll see cyberpunk leather jackets, preppy blazers, and deconstructed kimonos. My favorite find? A designer pop-up that fused hanbok silhouettes with streetwear. Locals don’t follow trends—they invent them.</p>
+
+      <img src=https://fashionista.com/.image/t_share/MTYyODk4OTk1MzQ4MjUyMjQ4/seoul-fashion-week-street-style-fall-2019.jpg alt="Seoul street fashion" onclick="openLightbox(this.src)" />
+
+      <h3>Milan: Statement and Swagger</h3>
+      <p>Bold sunglasses. Monochrome suits. Gold accessories. Milan shouted confidence. I attended a rooftop show where models strutted in citrus-colored suits and metallic skirts that danced with the wind. Milanese fashion is unapologetic—and I loved it.</p>
+
+      <img src=https://assets.vogue.com/photos/615223e793f82da45f22ca7a/master/w_2560%2Cc_limit/00_story.jpg alt="Milan fashion" onclick="openLightbox(this.src)" />
+
+      <h3>Final Thoughts</h3>
+      <p>What I learned? Fashion is about expression, not perfection. It tells stories without words. Whether it's the drape of a saree or the click of heels on cobblestones, it’s always saying something. The question is—are you listening?</p>
+    </article>
+
+    <section class="photo-gallery">
+      <h2>Style Gallery</h2>
+      <div class="gallery-images">
+        <img src=https://fashionista.com/.image/t_share/MTc5MzAwOTQ0NDg2MzQ0MzQz/milan-fashion-week-fall-2021-trends.jpg onclick="openLightbox(this.src)" />
+        <img src=https://www.wings2fashion.com/blogs/wp-content/uploads/2021/06/hp-paris-fashion-week-street-style-spring-2018-day-1.jpg onclick="openLightbox(this.src)" />
+        <img src=https://i.ytimg.com/vi/xlR2ukwIahU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDOOkflb-AGa1NVEpbHUsuMoq_CCg onclick="openLightbox(this.src)" />
+        <img src=https://i0.wp.com/defendernetwork.com/wp-content/uploads/2021/10/AFW.jpeg?fit=2500%2C1125&ssl=1 onclick="openLightbox(this.src)" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Style & Stroll. All rights reserved.
+  </footer>
+
+  <div class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" />
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.querySelector('.lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.querySelector('.lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indian Cuisine | Wanderlust Journal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #f7f0e1;
+      color: #2d2d2d;
+      line-height: 1.8;
+      padding: 30px;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: #8e3b46;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    main img {
+      
+  width: 70%; /* or 60%, 50%, etc. */
+  display: block;
+  margin: 20px auto;
+
+      border-radius: 10px;
+      margin: 20px 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    main img:hover {
+      transform: scale(1.05);
+    }
+
+    article h2 {
+      color: #9b2d3e;
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
+
+    .date, .author {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    article h3 {
+      margin-top: 30px;
+      color: #8e3b46;
+      font-size: 1.8rem;
+    }
+
+    aside h3 {
+      margin-bottom: 15px;
+      color: #9b2d3e;
+    }
+
+    aside ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 30px;
+    }
+
+    aside ul li {
+      margin-bottom: 10px;
+    }
+
+    aside ul li a {
+      text-decoration: none;
+      color: #2d2d2d;
+      transition: color 0.3s ease;
+      font-size: 1rem;
+    }
+
+    aside ul li a:hover {
+      color: #8e3b46;
+    }
+
+    .photo-gallery {
+      margin: 50px 0;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo-gallery h2 {
+      text-align: center;
+      color: #9b2d3e;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .gallery-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-images img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-images img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      border-radius: 10px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wanderlust Journal</h1>
+    <p>Exploring the world, one dish at a time</p>
+  </header>
+
+  <div class="container">
+    <main>
+      <article>
+        <h2>A Journey Through Indian Cuisine: Spices, Stories, and Soul</h2>
+        <p class="date">April 23, 2025</p>
+        <p class="author">Written by <strong>@flavorNomad</strong></p>
+
+        <p>India isn’t just a country—it’s a feast. Every region, every city, every family has a story told through its food. On my most recent journey, I followed the scent of spices from the streets of Old Delhi to the coconut groves of Kerala. What I discovered was far more than flavors. I found identity, community, and heart.</p>
+
+        <img src=https://previews.123rf.com/images/indianfoodimages/indianfoodimages1906/indianfoodimages190602187/125859675-indian-hindu-veg-thali-food-platter-selective-focus.jpg alt="Thali platter" onclick="openLightbox(this.src)" />
+
+        <h3>Street Food Symphony in Delhi</h3>
+        <p>Chandni Chowk is an orchestra of sound, steam, and spice. I watched a vendor toss potato patties onto a sizzling tava, then pile them with chutney, onions, and sev to make aloo tikki chaat. The first bite—sweet, spicy, tangy, hot—was an explosion I’ll never forget. Each stall had its own rhythm, its own fans, its own fiercely guarded secrets.</p>
+
+        <img src=https://thewhiskaddict.com/wp-content/uploads/2025/03/IMG_1697-scaled.jpg alt="Chaat" onclick="openLightbox(this.src)" />
+
+        <h3>Spice Trails in Rajasthan</h3>
+        <p>In Jaipur, I joined a local chef in grinding spices by hand: cardamom, cumin, coriander, chili. The air in her kitchen smelled like magic. We prepared laal maas—a fiery lamb curry once made for Rajput warriors. With every mouthful, I felt the history in the heat. Rajasthan doesn’t hold back—and neither does its cuisine.</p>
+
+        <img src=https://www.kitchensanctuary.com/wp-content/uploads/2022/04/Slow-cooker-beef-and-coconut-curry-square-FS-15.jpg alt="Laal Maas" onclick="openLightbox(this.src)" />
+
+        <h3>Coconut Curries & Calm in Kerala</h3>
+        <p>South India was a shift: calmer, greener, yet just as flavorful. In a backwater homestay, I learned to make avial, a creamy vegetable dish with coconut and curry leaves. We ate on banana leaves, with hands, barefoot beside the water. It was humbling and delicious. Food here was poetry—quiet and beautiful.</p>
+
+        <img src=https://www.pepperdelight.com/wp-content/uploads/2016/04/pepper-delight-aviyal-4.jpg alt="Avial" onclick="openLightbox(this.src)" />
+
+        <h3>Sweet Endings in Bengal</h3>
+        <p>No meal is complete in Bengal without dessert. I had rasgulla so soft it melted before my teeth touched it. Mishti doi, sweet yogurt, came in tiny clay pots. But it was the love with which they were served that stayed with me. In Kolkata, food isn’t just nourishment—it’s affection, celebration, and memory.</p>
+
+        <img src=https://madhurasrecipe.com/wp-content/uploads/2023/10/Rasgulla-Featured-Image.jpg alt="Rasgulla" onclick="openLightbox(this.src)" />
+
+        <h3>What Indian Food Taught Me</h3>
+        <p>Indian cuisine is not one thing. It’s a thousand. It’s layered, loud, sacred, and playful. It tells the story of its people—resilient, diverse, proud. From chaotic streets to quiet homes, every meal was a journey. Every bite, a conversation.</p>
+
+        <p>I left India full—not just of food, but of connection.</p>
+      </article>
+    </main>
+
+    <aside>
+      <h3>Recent Posts</h3>
+      <ul>
+        <li><a href="#">Tokyo's Hidden Eateries</a></li>
+        <li><a href="#">Café Culture in Paris</a></li>
+        <li><a href="#">Spices of Morocco</a></li>

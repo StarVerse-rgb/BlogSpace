@@ -1,0 +1,195 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MindFuel Daily - Self Help Blog</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #f4efe8;
+      color: #3e2f23;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(to right, #6b4c3b, #bfa382);
+      color: #fff8ef;
+      text-align: center;
+      padding: 2.5rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #f5e9dc;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+
+    article, aside {
+      background: #fffdf8;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 5px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    article h2 {
+      color: #6b4c3b;
+      margin-bottom: 1.2rem;
+    }
+
+    article p {
+      margin: 1.2rem 0;
+    }
+
+    .blog-img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .blog-img:hover {
+      transform: scale(1.02);
+    }
+
+    aside h3 {
+      color: #6b4c3b;
+      margin-bottom: 1rem;
+    }
+
+    aside li {
+      background: #f0e7da;
+      padding: 0.8rem;
+      border-radius: 8px;
+      margin: 0.5rem 0;
+      list-style: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #3e2f23;
+      color: #fdf9f4;
+      margin-top: 2rem;
+    }
+
+    /* Lightbox */
+    #lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MindFuel Daily</h1>
+    <p>@MindFuelDaily — Warmth, Wisdom, and Self-Growth</p>
+  </header>
+
+  <main>
+    <article>
+      <h2>Daily Rituals for a Grounded Life</h2>
+
+      <p>True change begins with quiet choices. With the right rhythm, your habits become healing. These practices are designed not to rush, but to root you in the present.</p>
+
+      <p><strong>1. Intentional Mornings:</strong> Start the day with stillness. Sip warm tea. Write down one intention. Let the day begin with grace, not noise.Each morning is a quiet invitation to begin again—with purpose, not just routine. Before the world rushes in, there’s a window of stillness where breath deepens and thoughts soften. An intentional morning isn’t about productivity, but presence. It’s the warm cup of coffee cradled in your hands, the slow stretch of waking limbs, and the whispered reminder that today is yours to shape. In that gentle pause, before notifications and noise, lies the power to set the tone for everything that follows.
+
+</p>
+
+      <img src=https://static.toiimg.com/photo/100227448.cms alt="Morning ritual" class="blog-img" onclick="openLightbox(this.src)">
+
+      <p><strong>2. Movement as Meditation:</strong> A mindful walk or gentle yoga helps shake off yesterday and meet today with strength and softness.Movement can be its own form of stillness—a rhythm that quiets the mind while awakening the body. Whether it’s a slow walk, a stretch, or a flow of breath and motion, the act of moving with awareness becomes a meditation in itself. Thoughts fall away as attention drops into the body, into the now. Each step, each gesture becomes a way of listening inward, of syncing with something deeper than noise or to-do lists. In movement, we find clarity—not by stopping the world, but by flowing with it.</p>
+       
+      <img src=https://workscounselingcenter.com/wp-content/uploads/2023/07/Meditation-Strength-Training-for-the-Mind-1080x675.jpg alt="Morning ritual" class="blog-img" onclick="openLightbox(this.src)">
+
+     <p><strong>3. Nourish the Mind:</strong> Read a single page of wisdom. Let that page color your perspective for the day.To nourish the mind is to be intentional about what we let in—what we read, watch, listen to, and dwell on. Just as the body needs wholesome food, the mind craves clarity, curiosity, and quiet. It thrives on meaningful conversations, inspiring stories, and spacious moments away from constant stimulation. Nourishment isn’t always doing more; often, it’s stepping back, unplugging, and choosing thoughts that uplift rather than deplete. A nourished mind becomes fertile ground for creativity, peace, and deeper understanding.
+
+</p>
+
+      <img src=https://www.bookslifelessons.com/wp-content/uploads/2024/09/enjoy-reading-books-for-best-life-lessons-1360x765.webp alt="Daily reading" class="blog-img" onclick="openLightbox(this.src)">
+
+      <p><strong>4. Reflective Writing:</strong> Before bed, write about what made you feel alive today. Lately, I’ve been thinking about how the way I begin my day shapes the rest of it—not just in tasks or outcomes, but in how I feel moving through it all. I’ve started waking up slower, more deliberately, letting the light creep in before I reach for anything. There’s something grounding about stretching before speaking, walking before scrolling. Even a few mindful breaths while the kettle boils feels like a ceremony. I’ve realized that movement doesn’t need to be intense to be powerful; sometimes it’s just about being in your body, letting it carry you back to yourself. I’m learning that what I feed my mind matters just as much as what I eat. A single line from a book, a quiet moment, a pause—these things linger. They stay with me longer than noise ever could.
+
+This practice turns your day into a mirror of meaning.</p>
+
+      <img src=https://images.stockcake.com/public/a/9/6/a9632cfa-4aa3-4db6-8987-3c97e438fde1_large/writing-in-journal-stockcake.jpg alt="Journaling at night" class="blog-img" onclick="openLightbox(this.src)">
+    </article>
+
+    <aside>
+      <h3>🌿 Gentle Boosts</h3>
+      <ul>
+        <li>🕯️ Light a candle before your morning routine</li>
+        <li>🖊️ Handwrite your to-do list on real paper</li>
+        <li>📻 Listen to lo-fi music while journaling</li>
+        <li>🚪 Step outside barefoot for 30 seconds</li>
+        <li>🌄 Watch the sky change during sunset</li>
+      </ul>
+    </aside>
+  </main>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="https://png.pngtree.com/thumb_back/fh260/background/20220220/pngtree-a-delicate-and-dreamy-floral-creation-with-soft-tones-and-a-blurred-aesthetic-photo-image_21130864.jpg" alt="Popup Image" />
+  </div>
+
+  <footer>
+    <p>&copy; 2025 MindFuel Daily — Crafted for your calm journey 🌿</p>
+  </footer>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style> 
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+  }
+
+  .navbar {
+    background-color: #1f1f1f;
+    padding: 1rem 2rem;
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #ffffff;
+  }
+
+  .navbar-brand:hover {
+    color: #f39c12;
+  }
+
+  .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    margin-right: 1rem;
+  }
+
+  .nav-link:hover {
+    color: #f39c12 !important;
+  }
+
+  .dropdown-menu {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-item {
+    color: #333;
+    font-weight: 500;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f39c12;
+    color: #fff;
+  }
+
+  .carousel-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .carousel-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    color: #1f1f1f;
+  }
+
+  .carousel-content1 {
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    max-width: 40%;
+  }
+
+  .carousel-content2 {
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    max-width: 30%;
+  }
+
+  .carousel-content3 {
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    max-width: 40%;
+  }
+
+  .carousel-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .carousel-description {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    font-weight:500;
+  }
+
+  .carousel-image {
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 300px;
+    width:auto;
+  }
+
+  .navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navbar-buttons {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  .btn-outline-light:hover {
+    background-color: #f39c12;
+    border-color: #f39c12;
+    color: #fff;
+  }
+
+    /* Travel Feature Section */
+    .travel-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 100px 15px 30px;
+      background-color: rgb(202, 191, 191);
+    }
+
+    .travel-feature {
+      display: flex;
+      max-width: 1100px;
+      width: 100%;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 40px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .travel-left {
+      flex: 1;
+      position: relative;
+      padding: 30px;
+      color: white;
+      border-radius: 10px;
+      background-image: url('https://blog.influence4you.com/wp-content/uploads/2021/12/averie-woodard-5d20kdvFCfA-unsplash-scaled.jpg');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .fashion-left {
+      flex: 1;
+      position: relative;
+      padding: 30px;
+      color: white;
+      border-radius: 10px;
+      background-image: url('https://www.zenscale.in/assets/zenfrontnew/images/industry/fashion/Fashion-bg.png');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .food-left {
+      flex: 1;
+      position: relative;
+      padding: 30px;
+      color: white;
+      border-radius: 10px;
+      background-image: url('https://c1.wallpaperflare.com/preview/363/547/669/dumpling-food-food-photography-food-styling.jpg');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .selfhelp-left {
+      flex: 1;
+      position: relative;
+      padding: 30px;
+      color: white;
+      border-radius: 10px;
+      background-image: url('https://blog.myneurogym.com/wp-content/uploads/2022/08/3-1.jpg');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .travel-left::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(0px);
+      z-index: 0;
+    }
+
+    .travel-left h1,
+    .travel-left p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .travel-left h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .travel-left p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .travel-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      color: #333;
+    }
+
+    .travel-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .travel-card .info {
+      padding: 15px;
+    }
+
+    .travel-card .info h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .travel-card .info p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .travel-feature {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .travel-left {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark position-relative">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">BlogSpace</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-center navbar-center" id="navbarContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#Travel">Travel</a></li>
+              <li><a class="dropdown-item" href="#Food">Food</a></li>
+              <li><a class="dropdown-item" href="#Fashion">Fashion</a></li>
+              <li><a class="dropdown-item" href="#Selfhelp">Self-help</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="navbar-buttons ms-auto">
+        <a href="login.html" class="btn btn-outline-light">Log In</a>
+        <a href="signup.html" class="btn btn-outline-light">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Travel Section -->
+  <section class="travel-wrapper" id="Travel">
+    <div class="travel-feature">
+      <!-- Left: Blurred Background with Text -->
+      <div class="travel-left">
+        <h1 style="font-size: 50px;">Travel</h1>
+        <p>Welcome to a world of wonder, where every destination has a story and every journey awakens the soul. Whether you're a seasoned traveler or someone with a passport full of dreams, this is your space to explore the unseen, feel the unfamiliar, and embrace the extraordinary. From cobbled streets in Europe to serene beaches in Asia, let's wander together — one adventure at a time.
+       </p>
+      </div>
+
+      <!-- Right: Cards with clear images -->
+      <div class="card-container">
+        <div class="travel-card">
+          <img src="https://media.digitalnomads.world/wp-content/uploads/2021/01/20120709/bali-for-digital-nomads.jpg"alt="Bali">
+          <div class="info">
+            <h3>Bali Bliss Diaries</h3>
+            <p>The island where dreams meet the divine. With its lush rice terraces, sacred temples, and turquoise shores, Bali is a soulful escape that blends natural beauty with spiritual serenity. Every sunrise feels like a fresh beginning in paradise.
+                <a href="travel.html"><b>Explore Now...</b></a>
+            </p>
+          </div>
+        </div>
+        <div class="travel-card">
+          <img src="https://w0.peakpx.com/wallpaper/988/365/HD-wallpaper-beauty-architecture-japan-landscape.jpg" alt="Kyoto">
+          <div class="info">
+            <h3>Lost in the charm of Kyoto</h3>
+            <p>where every street whispers stories of geishas, cherry blossoms, and ancient temples. A city where tradition dances with tranquility, leaving your soul spellbound in its serene embrace.
+            <a href="travel.html"><b>Explore Now...</b></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Food Section -->
+   <section class="travel-wrapper" id="Food">
+    <div class="travel-feature">
+      <!-- Left: Blurred Background with Text -->
+      <div class="food-left">
+        <h1 style="font-size: 50px;">Food</h1>
+        <p>Step into a kitchen where flavor knows no boundaries. Here, we celebrate the magic of food — the comfort it brings, the memories it stirs, and the joy it spreads. From spicy street snacks to soul-soothing desserts, every recipe is a journey of its own. Get ready to explore global tastes, local secrets, and the simple happiness found in a home-cooked meal.</p>
+      </div>
+
+      <!-- Right: Cards with clear images -->
+      <div class="card-container">
+        <div class="travel-card">
+          <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2023-09/14/full/1694673859-4182.jpeg?im=FeatureCrop,size=(826,465)" alt="Indian cuisine">
+          <div class="info">
+            <h3>A Journey Through Indian Cuisine</h3>
+            <p>Embark on a flavorful journey through Indian cuisine, where every bite tells a tale of rich spices, age-old traditions, and vibrant culture. From the fiery curries of the south to the aromatic biryanis of the north—it's a feast that touches the heart and soul. 
+                <a href="food.html"><b>Explore Now...</b></a></p>
+          </div>
+        </div>
+        <div class="travel-card">
+          <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg" alt="Cooking Adventures">
+          <div class="info">
+            <h3>Adventures in cooking</h3>
+            <p>Adventures in cooking—where a dash of curiosity meets a pinch of passion! From fiery fails to delicious discoveries, every stir, sizzle, and spice unlocks a new story in the kitchen. 
+                <a href="food.html"><b>Explore Now...</b></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fashion Section -->
+  <section class="travel-wrapper" id="Fashion">
+    <div class="travel-feature">
+      <!-- Left: Blurred Background with Text -->
+      <div class="fashion-left">
+        <h1 style="font-size: 50px;">Fashion</h1>
+        <p>Fashion is more than fabric — it’s a form of self-expression, a mood, and a movement. Whether you’re chasing trends or curating your signature look, this blog is your runway. From sleek streetwear to timeless classics, discover what makes style truly personal. Because when you dress with intention, you don’t just wear clothes — you wear confidence.
+             </p>
+      </div>
+
+      <!-- Right: Cards with clear images -->
+      <div class="card-container">
+        <div class="travel-card">
+          <img src="https://img.freepik.com/premium-vector/stylish-model-struts-confidently-down-vibrant-catwalk-illuminated-by-spotlight-chic-urban-fashion-show-setting_538213-122271.jpg?w=360" alt="Spotlight Fashion">
+          <div class="info">
+            <h3>From Sidewalks to Spotlights</h3>
+            <p>From sidewalks to spotlight, where everyday style meets runway dreams. This fashion blog captures the essence of street chic evolving into statement couture—because true style starts where confidence walks.
+                <a href="fashion.html"><b>Explore Now...</b></a></p>
+          </div>
+        </div>
+        <div class="travel-card">
+          <img src="https://www.atelierindirose.com/wp-content/uploads/2022/09/IMAGE_1659780558.jpg" alt="Block Print">
+          <div class="info">
+            <h3>Latest Trends in Hand Block Print Clothing You Should Know</h3>
+            <p>Hand block printing is an ancient art of making designer clothing and materials by making use of intricate designs. <a href="fashion.html"><b>Explore Now...</b></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- self-help Section -->
+  <section class="travel-wrapper" id="Selfhelp">
+    <div class="travel-feature">
+      <!-- Left: Blurred Background with Text -->
+      <div class="selfhelp-left">
+        <h1 style="font-size: 50px;">Self-help</h1>
+        <p>In a world that’s constantly moving, find a space to pause, reflect, and grow. This blog is your companion in the journey of becoming — stronger, calmer, and more aligned with your purpose. From mindset shifts to daily habits, we’re here to help you create a life that feels right for you. Because self-love isn’t selfish — it’s your foundation.</p>
+      </div>
+
+      <!-- Right: Cards with clear images -->
+      <div class="card-container">
+        <div class="travel-card">
+          <img src="https://media.licdn.com/dms/image/v2/C4E12AQG8QR-nJ5e5Ag/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1573068211500?e=2147483647&v=beta&t=xm6qLDO9vCoChwnKf-zdb5bvpla92dbHXDjgAmLcFHU" alt="Mindful Living">
+          <div class="info">
+            <h3>Mindful Living</h3>
+            <p>A mindful path to purposeful growth. It's a journey of becoming, where small steps lead to big transformations, and every moment is an opportunity to align your life with clarity, intention, and inner peace.<a href="selfhelp.html"><b>Explore Now...</b></a>
+            </p>
+          </div>
+        </div>
+        <div class="travel-card">
+          <img src="https://static.wixstatic.com/media/22143b_5b69989e45c04179829cc9e1683324bd~mv2.jpg/v1/fill/w_568,h_568,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/22143b_5b69989e45c04179829cc9e1683324bd~mv2.jpg">
+          <div class="info">
+            <h3>Daily rituals of Grounded Life</h3>
+            <p>Daily rituals of a grounded life are the quiet anchors in a chaotic world—morning stillness, mindful breaths, nourishing meals, and moments of gratitude. They root you in presence, bringing peace, purpose, and balance to each day.<a href="selfhelp.html"><b>Explore Now...</b></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

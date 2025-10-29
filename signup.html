@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up to BlogSpace</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #b7b5af;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    .signup-container h2 {
+      color: #292929;
+      margin-bottom: 25px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .signup-btn {
+      width: 100%;
+      background-color: #1c1d1e;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .signup-btn:hover {
+      background-color: #c49119;
+    }
+
+    .login-text {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .login-text a {
+      color: #165df5;
+      text-decoration: none;
+    }
+
+    .login-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signup-container">
+    <h2>Create Your BlogSpace Account</h2>
+    <form onsubmit="redirectToLogin(event)">
+      <input type="text" placeholder="Full Name" class="form-input" required>
+      <input type="email" placeholder="Email" class="form-input" required>
+      <input type="password" placeholder="Password" class="form-input" required>
+      <button type="submit" class="signup-btn">Sign Up</button>
+    </form>
+    <p class="login-text">
+      Already have an account? <a href="login.html">Login</a>
+    </p>
+  </div>
+
+  <script>
+    function redirectToLogin(event) {
+      event.preventDefault();
+      alert("Account created successfully");
+      window.location.href = "login.html"; // Redirects after OK is clicked on alert
+    }
+  </script>
+
+</body>
+</html>
